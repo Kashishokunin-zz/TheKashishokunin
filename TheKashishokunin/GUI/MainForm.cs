@@ -16,5 +16,15 @@ namespace TheKashishokunin.GUI
         {
             InitializeComponent();
         }
+
+        private void ログイン設定ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // TODO:ログイン設定画面を開く
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            // TODO:ログイン設定ファイル読み込み
+        }
     }
 }

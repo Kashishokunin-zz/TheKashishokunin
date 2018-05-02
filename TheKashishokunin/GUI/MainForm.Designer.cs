@@ -29,19 +29,21 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.btnConnect = new System.Windows.Forms.Button();
-            this.txtLiveUrl = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.labelLiveTitle = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtLiveUrl = new System.Windows.Forms.TextBox();
+            this.btnConnect = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.num = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.command = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.word = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.account = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ファイルToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.アカウントToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ログイン設定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -61,40 +63,14 @@
             this.panel1.Size = new System.Drawing.Size(484, 52);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // labelLiveTitle
             // 
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Controls.Add(this.statusStrip1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 76);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(484, 385);
-            this.panel2.TabIndex = 1;
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 363);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(484, 22);
-            this.statusStrip1.TabIndex = 0;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // btnConnect
-            // 
-            this.btnConnect.Location = new System.Drawing.Point(423, 3);
-            this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(58, 23);
-            this.btnConnect.TabIndex = 0;
-            this.btnConnect.Text = "接続";
-            this.btnConnect.UseVisualStyleBackColor = true;
-            // 
-            // txtLiveUrl
-            // 
-            this.txtLiveUrl.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txtLiveUrl.Location = new System.Drawing.Point(3, 3);
-            this.txtLiveUrl.Name = "txtLiveUrl";
-            this.txtLiveUrl.Size = new System.Drawing.Size(414, 23);
-            this.txtLiveUrl.TabIndex = 1;
+            this.labelLiveTitle.AutoSize = true;
+            this.labelLiveTitle.Location = new System.Drawing.Point(79, 29);
+            this.labelLiveTitle.Name = "labelLiveTitle";
+            this.labelLiveTitle.Size = new System.Drawing.Size(23, 12);
+            this.labelLiveTitle.TabIndex = 3;
+            this.labelLiveTitle.Text = "---";
             // 
             // label1
             // 
@@ -105,14 +81,32 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "放送タイトル：";
             // 
-            // labelLiveTitle
+            // txtLiveUrl
             // 
-            this.labelLiveTitle.AutoSize = true;
-            this.labelLiveTitle.Location = new System.Drawing.Point(79, 29);
-            this.labelLiveTitle.Name = "labelLiveTitle";
-            this.labelLiveTitle.Size = new System.Drawing.Size(23, 12);
-            this.labelLiveTitle.TabIndex = 3;
-            this.labelLiveTitle.Text = "---";
+            this.txtLiveUrl.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txtLiveUrl.Location = new System.Drawing.Point(3, 3);
+            this.txtLiveUrl.Name = "txtLiveUrl";
+            this.txtLiveUrl.Size = new System.Drawing.Size(414, 23);
+            this.txtLiveUrl.TabIndex = 1;
+            // 
+            // btnConnect
+            // 
+            this.btnConnect.Location = new System.Drawing.Point(423, 3);
+            this.btnConnect.Name = "btnConnect";
+            this.btnConnect.Size = new System.Drawing.Size(58, 23);
+            this.btnConnect.TabIndex = 0;
+            this.btnConnect.Text = "接続";
+            this.btnConnect.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.statusStrip1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 76);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(484, 385);
+            this.panel2.TabIndex = 1;
             // 
             // dataGridView1
             // 
@@ -156,10 +150,19 @@
             this.account.HeaderText = "アカウント";
             this.account.Name = "account";
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Location = new System.Drawing.Point(0, 363);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(484, 22);
+            this.statusStrip1.TabIndex = 0;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ファイルToolStripMenuItem});
+            this.ファイルToolStripMenuItem,
+            this.アカウントToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(484, 24);
@@ -171,6 +174,21 @@
             this.ファイルToolStripMenuItem.Name = "ファイルToolStripMenuItem";
             this.ファイルToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.ファイルToolStripMenuItem.Text = "ファイル";
+            // 
+            // アカウントToolStripMenuItem
+            // 
+            this.アカウントToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ログイン設定ToolStripMenuItem});
+            this.アカウントToolStripMenuItem.Name = "アカウントToolStripMenuItem";
+            this.アカウントToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.アカウントToolStripMenuItem.Text = "アカウント";
+            // 
+            // ログイン設定ToolStripMenuItem
+            // 
+            this.ログイン設定ToolStripMenuItem.Name = "ログイン設定ToolStripMenuItem";
+            this.ログイン設定ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.ログイン設定ToolStripMenuItem.Text = "ログイン設定";
+            this.ログイン設定ToolStripMenuItem.Click += new System.EventHandler(this.ログイン設定ToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -185,6 +203,7 @@
             this.MinimumSize = new System.Drawing.Size(500, 500);
             this.Name = "MainForm";
             this.Text = "The歌詞職人";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -213,5 +232,7 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn account;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ファイルToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem アカウントToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ログイン設定ToolStripMenuItem;
     }
 }
